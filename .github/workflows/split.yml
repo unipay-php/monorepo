@@ -22,7 +22,7 @@ jobs:
 
       # get package json list
       - id: output_data
-        run: echo "::set-output name=matrix::$(vendor/bin/monorepo-builder packages-json)"
+        run: echo "::set-output name=matrix::$(ls packages | jq -R -s -c 'split("\n")[:-1]')"
 
     outputs:
       matrix: ${{ steps.output_data.outputs.matrix }}
