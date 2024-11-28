@@ -22,7 +22,7 @@ jobs:
 
       # get package json list
       - id: output_data
-        run: echo "::set-output name=matrix::$(ls packages | jq -R -s -c 'split("\n")[:-1]')"
+        run: echo "matrix=$(ls packages | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
 
     outputs:
       matrix: ${{ steps.output_data.outputs.matrix }}
@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Monorepo Split of ${{ matrix.package }}
-        uses: symplify/github-action-monorepo-split@master
+        uses: danharrin/monorepo-split-github-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
