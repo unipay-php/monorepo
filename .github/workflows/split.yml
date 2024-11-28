@@ -44,8 +44,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
-          package-directory: 'packages/${{ matrix.package }}'
-          split-repository-organization: 'unipay-php'
-          split-repository-name: '${{ matrix.package }}'
-          user-name: "bennetgallein"
-          user-email: "me@bennetgallein.de"
+          package_directory: 'packages/${{ matrix.package }}'
+          repository_organization: 'unipay-php'
+          repository_name: '${{ matrix.package }}'
+          user_name: "bennetgallein"
+          user_email: "me@bennetgallein.de"
