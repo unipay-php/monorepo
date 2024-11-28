@@ -1,0 +1,13 @@
+{
+    "name": "unipay/monorepo",
+    "type": "metapackage",
+    "authors": [
+        {
+            "name": "Bennet Gallein",
+            "email": "me@bennetgallein.de"
+        }
+    ],
+    "require-dev": {
+        "symplify/monorepo-builder": "^11.2"
+    }
+}
