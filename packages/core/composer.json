@@ -1,0 +1,11 @@
+{
+    "name": "unipay-php/core",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unipay\\Core\\": "src"
+        }
+    }
+}
